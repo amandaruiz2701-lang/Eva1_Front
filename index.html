@@ -18,30 +18,61 @@
     </nav>
 
     <main>
-        <header class="bg-light py-5 text-center">
-            <div class="container">
-                <h1 class="display-4 fw-bold">Amanda</h1>
-                <p class="lead text-muted">Estudiante de Ingeniería en Informática</p>
-                <button class="btn btn-primary">Contáctame</button>
-            </div>
-        </header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">AMANDA <span class="badge bg-light text-primary">DEV</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-        <section class="container my-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Sobre mí</h2>
-                    <p>Soy una futura ingeniera apasionada por el desarrollo de software y la resolución de problemas técnicos.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Habilidades</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">HTML5 & CSS3</li>
-                        <li class="list-group-item">Bootstrap 5</li>
-                        <li class="list-group-item">Git & GitHub</li>
-                    </ul>
+<header class="py-5 bg-light border-bottom">
+    <div class="container my-5">
+        <div class="text-center">
+            <img src="https://via.placeholder.com/150" class="rounded-circle shadow mb-4" alt="Foto de perfil">
+            <h1 class="fw-bolder">Ingeniería en Informática @ INACAP</h1>
+            <p class="lead mb-4">Desarrolladora en formación | Apasionada por el código limpio y la UI/UX.</p>
+            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                <a class="btn btn-primary btn-lg px-4 gap-3" href="#proyectos">Ver mis proyectos</a>
+                <a class="btn btn-outline-secondary btn-lg px-4" href="#">Descargar CV</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="proyectos" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Mis Proyectos</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Focusmind</h5>
+                        <p class="card-text">Aplicación de gestión de tiempo y productividad desarrollada con lógica de programación eficiente.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Ver código</a>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">E-commerce Semántico</h5>
+                        <p class="card-text">Maquetación profesional utilizando etiquetas HTML5 puras para mejorar el SEO.</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
