@@ -1,0 +1,16 @@
+/* Para que el footer siempre esté abajo si hay poco contenido */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Personalización de colores */
+.navbar-brand {
+    font-weight: bold;
+    color: #0d6efd !important;
+}
