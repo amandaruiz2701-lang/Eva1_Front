@@ -1,16 +1,67 @@
-/* Para que el footer siempre esté abajo si hay poco contenido */
+/* Definición de variables de color (Paleta Profesional) */
+:root {
+    --rosa-principal: #D8A7B1; /* Rosa viejo/palo */
+    --rosa-oscuro: #B5838D;    /* Para estados hover */
+    --gris-oscuro: #212529;    /* Para texto principal y nav */
+    --blanco-puro: #FFFFFF;
+    --gris-claro: #F8F9FA;    /* Fondos de sección */
+}
+
+/* Estilos Generales */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco-puro);
 }
 
-main {
-    flex: 1;
+/* --- Sobreescribiendo Bootstrap --- */
+
+/* Navegación */
+.navbar-dark.bg-dark {
+    background-color: var(--gris-oscuro) !important;
 }
 
-/* Personalización de colores */
-.navbar-brand {
-    font-weight: bold;
-    color: #0d6efd !important;
+.navbar-brand .badge {
+    background-color: var(--rosa-principal) !important;
+    color: var(--gris-oscuro) !important;
+}
+
+/* Botones Personalizados */
+.btn-rosa {
+    background-color: var(--rosa-principal);
+    color: var(--gris-oscuro);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-rosa:hover {
+    background-color: var(--rosa-oscuro);
+    color: var(--gris-oscuro);
+}
+
+.btn-outline-rosa {
+    border: 2px solid var(--rosa-principal);
+    color: var(--rosa-principal);
+    font-weight: 600;
+}
+
+.btn-outline-rosa:hover {
+    background-color: var(--rosa-principal);
+    color: var(--blanco-puro);
+}
+
+/* Títulos y Acentos */
+h1, h2, h3, h5 {
+    color: var(--gris-oscuro);
+    font-weight: 700;
+}
+
+.text-rosa {
+    color: var(--rosa-principal) !important;
+}
+
+/* Cards */
+.card {
+    border: 1px solid rgba(0,0,0,.08);
 }
