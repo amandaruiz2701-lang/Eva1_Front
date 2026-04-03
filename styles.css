@@ -115,24 +115,24 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Configuraciones individuales para romper la simetría */
 .item-1 {
-    top: 5%;
-    left: 15%;
-    width: 160px;
+    top: 70%;
+    left: 5%;
+    width: 260px;
     animation-delay: 0s;
 }
 
 .item-2 {
-    top: 25%;
+    top: 0%;
     right: 5%;
-    width: 240px;
+    width: 440px;
     transform: rotate(8deg); /* Inclinación tipo foto polaroid */
     animation-delay: -2s; /* Empieza en otro punto de la animación */
 }
 
 .item-3 {
-    bottom: 5%;
-    left: 30%;
-    width: 140px;
+    bottom: 15%;
+    left: 23%;
+    width: 440px;
     animation-delay: -4s;
 }
 
