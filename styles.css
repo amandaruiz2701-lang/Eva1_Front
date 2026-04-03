@@ -149,3 +149,103 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(0px) rotate(0deg);
     }
 }
+/* =========================================
+   6. SECCIÓN DE EVOLUCIÓN (TIMELINE)
+   ========================================= */
+.evolution-section {
+    background-color: #FFFFFF; /* Fondo limpio para contrastar con el hero */
+}
+
+.max-w-700 {
+    max-width: 700px;
+}
+
+/* El contenedor principal de la línea de tiempo */
+.timeline {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px 0;
+}
+
+/* La Línea Central Vertical (usando un pseudo-elemento) */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Centrado exacto en escritorio */
+    width: 2px;
+    background-color: #E0E0E0;
+    transform: translateX(-50%);
+}
+
+/* Cada bloque del timeline */
+.timeline-item {
+    position: relative;
+    width: 50%; /* Ocupa la mitad del espacio */
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.left-side {
+    left: 0;
+}
+
+.right-side {
+    left: 50%;
+}
+
+/* El círculo conector (El puntito en la línea) */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-flor-vibrante);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Posición del punto según de qué lado esté */
+.left-side::after {
+    right: -8px;
+}
+
+.right-side::after {
+    left: -8px;
+}
+
+/* Diseño de la tarjeta de contenido */
+.timeline-content {
+    background-color: var(--color-fondo-app);
+    border-color: rgba(106, 27, 154, 0.1) !important;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.1) !important;
+}
+
+/* --- MEDIA QUERIES: RESPONSIVIDAD (Vital para nota Excelente) --- */
+@media screen and (max-width: 768px) {
+    /* En celulares, la línea pasa a la izquierda */
+    .timeline::before {
+        left: 20px; 
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+    
+    .right-side {
+        left: 0;
+    }
+    
+    .left-side::after, .right-side::after {
+        left: 12px;
+    }
+}
