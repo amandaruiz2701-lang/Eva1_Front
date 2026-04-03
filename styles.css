@@ -1,67 +1,81 @@
-/* Definición de variables de color (Paleta Profesional) */
+/* =========================================
+   1. SISTEMA DE VARIABLES (Rúbrica 1.1.3)
+   ========================================= */
 :root {
-    --rosa-principal: #D8A7B1; /* Rosa viejo/palo */
-    --rosa-oscuro: #B5838D;    /* Para estados hover */
-    --gris-oscuro: #212529;    /* Para texto principal y nav */
-    --blanco-puro: #FFFFFF;
-    --gris-claro: #F8F9FA;    /* Fondos de sección */
+    /* Tonos lilas y rosas con alto contraste para WCAG AA */
+    --flor-oscura: #6A1B9A;      /* Lila oscuro para textos principales */
+    --flor-vibrante: #D81B60;    /* Rosa fuerte para botones y acentos */
+    --flor-pastel: #FCE4EC;      /* Rosa muy pálido para fondos de tarjetas */
+    --fondo-app: #FAFAFA;        /* Blanco roto para no cansar la vista */
+    --texto-secundario: #4A4A4A; 
 }
 
-/* Estilos Generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--gris-oscuro);
-    background-color: var(--blanco-puro);
+    background-color: var(--fondo-app);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--texto-secundario);
 }
 
-/* --- Sobreescribiendo Bootstrap --- */
-
-/* Navegación */
-.navbar-dark.bg-dark {
-    background-color: var(--gris-oscuro) !important;
+h1, h2, h3, h4, h5, h6 {
+    color: var(--flor-oscura);
 }
-
-.navbar-brand .badge {
-    background-color: var(--rosa-principal) !important;
-    color: var(--gris-oscuro) !important;
-}
-
-/* Botones Personalizados */
-.btn-rosa {
-    background-color: var(--rosa-principal);
-    color: var(--gris-oscuro);
-    border: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-rosa:hover {
-    background-color: var(--rosa-oscuro);
-    color: var(--gris-oscuro);
-}
-
-.btn-outline-rosa {
-    border: 2px solid var(--rosa-principal);
-    color: var(--rosa-principal);
-    font-weight: 600;
-}
-
-.btn-outline-rosa:hover {
-    background-color: var(--rosa-principal);
-    color: var(--blanco-puro);
-}
-
-/* Títulos y Acentos */
-h1, h2, h3, h5 {
-    color: var(--gris-oscuro);
-    font-weight: 700;
-}
-
-.text-rosa {
-    color: var(--rosa-principal) !important;
-}
-
-/* Cards */
+/* =========================================
+   2. TARJETAS Y ANIMACIONES SUTILES
+   ========================================= */
 .card {
-    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 12px;
+    background-color: var(--flor-pastel);
+    border: 1px solid rgba(106, 27, 154, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto de elevación al pasar el mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.15) !important;
+}
+
+/* =========================================
+   3. BOTONES Y ACCESIBILIDAD (FOCUS)
+   ========================================= */
+.btn-primary {
+    background-color: var(--flor-vibrante);
+    border-color: var(--flor-vibrante);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--flor-oscura);
+    border-color: var(--flor-oscura);
+}
+
+/* El delineado obligatorio para accesibilidad por teclado */
+.btn:focus, input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.4) !important;
+}
+
+/* Estilo especial para el número del cronómetro */
+.timer-display {
+    color: var(--flor-oscura);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+/* =========================================
+   4. COMPONENTES GLOBALES
+   ========================================= */
+.navbar {
+    background-color: var(--flor-oscura) !important;
+}
+
+.navbar-brand .text-primary {
+    color: var(--flor-pastel) !important;
+}
+
+.text-primary {
+    color: var(--flor-vibrante) !important;
+}
+
+/* Barra de progreso de hipopresivos */
+.progress-bar {
+    background-color: var(--flor-vibrante) !important;
 }
