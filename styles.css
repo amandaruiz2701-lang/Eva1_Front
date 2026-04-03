@@ -115,14 +115,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Configuraciones individuales para romper la simetría */
 .item-1 {
-    top: 70%;
+    top: 0%;
     left: 5%;
-    width: 260px;
+    width: 360px;
     animation-delay: 0s;
 }
 
 .item-2 {
-    top: 0%;
+    top: 60%;
     right: 5%;
     width: 440px;
     transform: rotate(8deg); /* Inclinación tipo foto polaroid */
@@ -130,8 +130,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .item-3 {
-    bottom: 15%;
-    left: 23%;
+    bottom: 45%;
+    left: 38%;
     width: 440px;
     animation-delay: -4s;
 }
@@ -150,102 +150,44 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 /* =========================================
-   6. SECCIÓN DE EVOLUCIÓN (TIMELINE)
+   6. SECCIÓN DE METODOLOGÍA (TARJETAS)
    ========================================= */
-.evolution-section {
-    background-color: #FFFFFF; /* Fondo limpio para contrastar con el hero */
+.methodology-section {
+    background-color: #FFFFFF;
 }
 
 .max-w-700 {
     max-width: 700px;
 }
 
-/* El contenedor principal de la línea de tiempo */
-.timeline {
-    width: 100%;
-    max-width: 900px;
-    padding: 20px 0;
+/* Contenedor del Icono */
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-flor-oscura) !important; /* Lila oscuro por defecto */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* La Línea Central Vertical (usando un pseudo-elemento) */
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%; /* Centrado exacto en escritorio */
-    width: 2px;
-    background-color: #E0E0E0;
-    transform: translateX(-50%);
-}
-
-/* Cada bloque del timeline */
-.timeline-item {
-    position: relative;
-    width: 50%; /* Ocupa la mitad del espacio */
-    padding: 0 40px;
-    margin-bottom: 40px;
-}
-
-.left-side {
-    left: 0;
-}
-
-.right-side {
-    left: 50%;
-}
-
-/* El círculo conector (El puntito en la línea) */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    width: 16px;
-    height: 16px;
-    background-color: var(--color-flor-vibrante);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-/* Posición del punto según de qué lado esté */
-.left-side::after {
-    right: -8px;
-}
-
-.right-side::after {
-    left: -8px;
-}
-
-/* Diseño de la tarjeta de contenido */
-.timeline-content {
+/* Efectos de la Tarjeta al pasar el mouse */
+.method-card {
     background-color: var(--color-fondo-app);
-    border-color: rgba(106, 27, 154, 0.1) !important;
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(106, 27, 154, 0.05) !important;
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(216, 27, 96, 0.1) !important;
+.method-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(106, 27, 154, 0.1) !important;
+    border-color: var(--color-flor-pastel) !important;
 }
 
-/* --- MEDIA QUERIES: RESPONSIVIDAD (Vital para nota Excelente) --- */
-@media screen and (max-width: 768px) {
-    /* En celulares, la línea pasa a la izquierda */
-    .timeline::before {
-        left: 20px; 
-    }
-    
-    .timeline-item {
-        width: 100%;
-        padding-left: 60px;
-        padding-right: 15px;
-    }
-    
-    .right-side {
-        left: 0;
-    }
-    
-    .left-side::after, .right-side::after {
-        left: 12px;
-    }
+/* Animación del icono al tocar la tarjeta */
+.method-card:hover .icon-wrapper {
+    background-color: var(--color-flor-vibrante) !important; /* Cambia a rosa brillante */
+    transform: scale(1.1) rotate(10deg);
+}
+
+.method-card:hover .text-primary-fusion {
+    color: var(--color-flor-oscura) !important;
 }
