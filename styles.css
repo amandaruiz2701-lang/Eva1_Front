@@ -191,3 +191,56 @@ h1, h2, h3, h4, h5, h6 {
 .method-card:hover .text-primary-fusion {
     color: var(--color-flor-oscura) !important;
 }
+
+/* =========================================
+   7. HERRAMIENTAS INTERACTIVAS (FORMULARIOS Y UI)
+   ========================================= */
+
+/* 7.1 Formularios (Calculadora Kcal) */
+
+/* Sobrescribir el borde y sombra azul genérica de Bootstrap al hacer clic */
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-flor-vibrante) !important;
+    box-shadow: 0 0 0 0.25rem rgba(216, 27, 96, 0.2) !important;
+    background-color: #ffffff !important;
+}
+
+/* Suavizar el aspecto base de los inputs */
+.form-control, .form-select {
+    color: var(--color-dark-fusion);
+    border-radius: 8px; /* Bordes ligeramente más curvos */
+    transition: all 0.3s ease;
+}
+
+.form-label {
+    color: var(--color-flor-oscura);
+    letter-spacing: 0.5px;
+}
+
+/* 7.2 Tarjetas de las Herramientas */
+
+/* Sombra premium para las tarjetas (más suave y teñida de lila) */
+#herramienta-kcal .card, #herramienta-hipopresivos .card {
+    box-shadow: 0 20px 40px rgba(106, 27, 154, 0.08) !important;
+    border: 1px solid rgba(106, 27, 154, 0.05) !important;
+}
+
+/* 7.3 Temporizador Hipopresivo */
+
+/* Estilo para el número gigante del cronómetro */
+.timer-display {
+    color: var(--color-flor-oscura) !important;
+    text-shadow: 2px 4px 10px rgba(106, 27, 154, 0.1);
+    letter-spacing: -2px;
+}
+
+/* Forzar que la barra de progreso use tu color rosa vibrante */
+.progress-bar.bg-fusion {
+    background-color: var(--color-flor-vibrante) !important;
+}
+
+/* Iconos de las listas de instrucciones */
+.list-unstyled i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}

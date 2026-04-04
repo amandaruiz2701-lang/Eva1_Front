@@ -18,7 +18,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#calculadora-kcal">Calculadora Kcal</a></li>
+                    <li class="nav-item"><a href="#herramienta-kcal">Calculadora</a>
                     <li class="nav-item"><a class="nav-link" href="#contador-hipopresivos">Hipopresivos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
                 </ul>
@@ -101,6 +101,7 @@
                     <article class="method-card card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
                         <div class="custom-icon-wrapper mx-auto mb-4">
                             <img src="img/icono1.png" class="img-fluid render-3d" alt="Corazón metabólico floral">
+                            <a href="#herramienta-hipopresivos" class="text-primary-fusion fw-bold small text-uppercase">Ver</a>
                         </div>
                         <h3 class="h4 fw-bold mb-3 text-dark-fusion">1. Inteligencia Metabólica</h3>
                         <p class="text-muted mb-0 small">
@@ -139,102 +140,123 @@
 
     <main class="container my-5">
         
-        <section id="calculadora-kcal" class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <header class="text-center mb-4">
-                    <h2 class="display-6 fw-bold">Calculadora de Gasto Energético</h2>
-                    <p class="text-muted">Optimiza tu nutrición con datos precisos.</p>
-                </header>
-
-                <div class="card shadow-sm p-4">
-                    <form id="kcal-form" aria-labelledby="form-title">
-                        <h3 id="form-title" class="visually-hidden">Datos Biométricos</h3>
-
-                        <fieldset class="mb-4">
-                            <legend class="h5 mb-3 border-bottom pb-2">Tus Medidas</legend>
-                            
-                            <div class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="user-weight" class="form-label">Peso (kg)</label>
-                                    <input type="number" id="user-weight" class="form-control" placeholder="70" required min="30" step="0.1">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="user-height" class="form-label">Altura (cm)</label>
-                                    <input type="number" id="user-height" class="form-control" placeholder="165" required min="100">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="user-age" class="form-label">Edad</label>
-                                    <input type="number" id="user-age" class="form-control" placeholder="32" required min="15">
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <fieldset class="mb-4">
-                            <legend class="h5 mb-3 border-bottom pb-2">Nivel de Actividad</legend>
-                            <select id="activity-level" class="form-select" required aria-label="Selecciona tu nivel de actividad">
-                                <option value="" disabled selected>Elegir...</option>
-                                <option value="sedentary">Sedentario (Oficina/poco ejercicio)</option>
-                                <option value="moderate">Moderado (3-5 días/semana)</option>
-                                <option value="intense">Intenso (Atleta/6-7 días)</option>
-                            </select>
-                        </fieldset>
-
-                        <button type="submit" class="btn btn-primary w-100 fw-bold py-2">CALCULAR MIS CALORÍAS</button>
-                    </form>
-                </div>
-
-                <article class="mt-4 p-3 border-start border-4 border-primary bg-light" id="results-area" aria-live="polite">
-                    <h4 class="h5">Resultado Estimado:</h4>
-                    <p class="mb-0">Tu mantenimiento es de <strong>2,150 kcal/día</strong>.</p>
-                    <small class="text-muted">Sugerencia: Prioriza proteínas y carbohidratos complejos.</small>
-                </article>
-            </div>
-        </section>
-        <hr class="my-5 text-muted"> <section id="contador-hipopresivos" class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 text-center">
-                <header class="mb-4">
-                    <h2 class="display-6 fw-bold">Temporizador Hipopresivo</h2>
-                    <p class="text-muted">Controla tus ciclos de respiración y apnea.</p>
-                </header>
-
-                <div class="card shadow-sm p-4 border-0 bg-light">
-                    <div class="mb-3" aria-live="assertive">
-                        <span class="badge bg-primary fs-6 px-3 py-2 text-uppercase tracking-wide" id="fase-actual">
-                            Fase: Preparación
-                        </span>
-                    </div>
-
-                    <div class="display-1 fw-bolder text-dark mb-4 timer-display" role="timer" aria-label="Tiempo restante" id="tiempo-display">
-                        00:00
-                    </div>
-
-                    <div class="progress mb-4" style="height: 10px;" role="progressbar" aria-label="Progreso del ciclo" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width: 0%"></div>
-                    </div>
-
-                    <div class="d-flex justify-content-center gap-3">
-                        <button class="btn btn-success btn-lg px-4 fw-bold shadow-sm" aria-label="Iniciar rutina">
-                            <i class="bi bi-play-fill"></i> Iniciar
-                        </button>
-                        <button class="btn btn-warning btn-lg px-4 fw-bold shadow-sm" aria-label="Pausar rutina" disabled>
-                            <i class="bi bi-pause-fill"></i> Pausa
-                        </button>
-                        <button class="btn btn-outline-danger btn-lg px-4 fw-bold shadow-sm" aria-label="Reiniciar rutina">
-                            <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
-                        </button>
-                    </div>
-                </div>
-
-                <article class="mt-4 text-start bg-white p-3 rounded shadow-sm">
-                    <h3 class="h6 fw-bold border-bottom pb-2">Ciclo Estándar:</h3>
-                    <ul class="list-unstyled mb-0 small text-muted">
-                        <li><strong class="text-dark">Inhalación:</strong> 2 segundos</li>
-                        <li><strong class="text-dark">Exhalación:</strong> 4 segundos</li>
-                        <li><strong class="text-dark">Apnea (Vacío):</strong> 10 - 25 segundos</li>
+        <section id="herramienta-kcal" class="py-5 bg-light border-top">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-5">
+                    <span class="badge bg-fusion text-white rounded-pill px-3 py-2 mb-3">Herramienta 01</span>
+                    <h2 class="display-6 fw-bold text-dark-fusion mb-4">Calculadora de Gasto Energético</h2>
+                    <p class="lead text-muted mb-4">
+                        Descubre exactamente cuántas calorías necesita tu cuerpo para funcionar, mantenerse o transformarse.
+                    </p>
+                    <h4 class="h6 fw-bold mb-3"><i class="bi bi-info-circle text-primary-fusion me-2"></i>¿Cómo usarla?</h4>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> <strong>Paso 1:</strong> Ingresa tus datos biométricos reales.</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> <strong>Paso 2:</strong> Sé honesta con tu nivel de actividad física.</li>
+                        <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i> <strong>Paso 3:</strong> Usa el resultado como tu límite diario para estructurar tus comidas.</li>
                     </ul>
-                </article>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-white">
+                        <form id="kcal-form" aria-labelledby="form-title">
+                            <h3 id="form-title" class="visually-hidden">Datos Biométricos</h3>
+
+                            <fieldset class="mb-4">
+                                <legend class="h6 mb-3 text-uppercase fw-bold text-muted border-bottom pb-2">Tus Medidas</legend>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label for="user-weight" class="form-label small fw-bold">Peso (kg)</label>
+                                        <input type="number" id="user-weight" class="form-control form-control-lg bg-light border-0" placeholder="Ej: 70" required min="30" step="0.1">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="user-height" class="form-label small fw-bold">Altura (cm)</label>
+                                        <input type="number" id="user-height" class="form-control form-control-lg bg-light border-0" placeholder="Ej: 165" required min="100">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="user-age" class="form-label small fw-bold">Edad</label>
+                                        <input type="number" id="user-age" class="form-control form-control-lg bg-light border-0" placeholder="Ej: 32" required min="15">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="mb-4">
+                                <legend class="h6 mb-3 text-uppercase fw-bold text-muted border-bottom pb-2">Actividad Diaria</legend>
+                                <select id="activity-level" class="form-select form-select-lg bg-light border-0" required aria-label="Selecciona tu nivel de actividad">
+                                    <option value="" disabled selected>Selecciona tu nivel...</option>
+                                    <option value="sedentary">Sedentario (Oficina/poco ejercicio)</option>
+                                    <option value="moderate">Moderado (3-5 días/semana)</option>
+                                    <option value="intense">Intenso (Atleta/6-7 días)</option>
+                                </select>
+                            </fieldset>
+
+                            <button type="submit" class="btn btn-fusion w-100 fw-bold py-3 text-uppercase tracking-wide shadow-sm">
+                                Calcular Mis Calorías
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
+       <section id="herramienta-hipopresivos" class="py-5 bg-white border-top">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <span class="badge bg-fusion text-white rounded-pill px-3 py-2 mb-3">Herramienta 02</span>
+                    <h2 class="display-6 fw-bold text-dark-fusion mb-4">Temporizador Hipopresivo</h2>
+                    <p class="lead text-muted mb-4">
+                        El secreto de un core fuerte no es hacer mil abdominales, es dominar el vacío abdominal y la respiración diafragmática.
+                    </p>
+                    <h4 class="h6 fw-bold mb-3"><i class="bi bi-info-circle text-primary-fusion me-2"></i>¿Cómo usarlo?</h4>
+                    <ul class="list-unstyled text-muted small">
+                        <li class="mb-2"><i class="bi bi-wind text-info me-2"></i> <strong>Inhalación (2s):</strong> Abre tus costillas al máximo.</li>
+                        <li class="mb-2"><i class="bi bi-arrow-down-circle text-warning me-2"></i> <strong>Exhalación (4s):</strong> Suelta todo el aire lentamente.</li>
+                        <li class="mb-2"><i class="bi bi-pause-circle text-danger me-2"></i> <strong>Apnea (10s+):</strong> Sin respirar, abre costillas simulando una inhalación falsa (vacío).</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-light text-center position-relative overflow-hidden">
+                        
+                        <i class="bi bi-stopwatch position-absolute top-50 start-50 translate-middle text-white opacity-50" style="font-size: 15rem; z-index: 0;"></i>
+
+                        <div class="position-relative z-1">
+                            <div class="mb-4" aria-live="assertive">
+                                <span class="badge bg-white text-dark-fusion border border-fusion fs-6 px-4 py-2 text-uppercase tracking-wide shadow-sm" id="fase-actual">
+                                    Fase: Preparación
+                                </span>
+                            </div>
+
+                            <div class="display-1 fw-bolder text-dark mb-4 timer-display" role="timer" aria-label="Tiempo restante" id="tiempo-display" style="font-variant-numeric: tabular-nums;">
+                                00:00
+                            </div>
+
+                            <div class="progress mb-5 bg-white shadow-sm" style="height: 12px; border-radius: 10px;" role="progressbar" aria-label="Progreso del ciclo" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-fusion" style="width: 0%"></div>
+                            </div>
+
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <button class="btn btn-success btn-lg px-4 fw-bold shadow-sm rounded-pill" aria-label="Iniciar rutina">
+                                    <i class="bi bi-play-fill"></i> Iniciar
+                                </button>
+                                <button class="btn btn-warning btn-lg px-4 fw-bold shadow-sm rounded-pill text-dark" aria-label="Pausar rutina" disabled>
+                                    <i class="bi bi-pause-fill"></i> Pausa
+                                </button>
+                                <button class="btn btn-outline-danger btn-lg px-4 fw-bold shadow-sm rounded-pill bg-white" aria-label="Reiniciar rutina">
+                                    <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 <hr class="my-5 text-muted">
 
         <section id="registro" class="row justify-content-center mb-5">
