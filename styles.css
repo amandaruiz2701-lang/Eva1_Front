@@ -63,9 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 /* =========================================
    4. COMPONENTES GLOBALES
    ========================================= */
-.navbar {
-    background-color: var(--flor-oscura) !important;
-}
+
 
 .navbar-brand .text-primary {
     color: var(--flor-pastel) !important;
@@ -346,4 +344,63 @@ footer .btn-fusion:hover {
     background-color: var(--flor-pastel) !important;
     border-color: var(--flor-pastel) !important;
     color: var(--flor-oscura) !important;
+}
+/* =========================================
+   9. IDENTIDAD DE MARCA Y LOGOTIPO
+   ========================================= */
+
+.brand-logo, .brand-footer img {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 2px 4px rgba(106, 27, 154, 0.2));
+}
+
+/* Ajuste específico para que el texto del Navbar no pierda su color al pasar el hover */
+.navbar-brand:hover {
+    color: #ffffff !important;
+}
+
+/* Ajuste específico para que el texto del Navbar reaccione con el color de acento */
+.navbar-brand:hover, .navbar-brand:hover span {
+    color: var(--flor-vibrante) !important;
+}
+
+/* =========================================
+   ESTILOS DE LA NAVBAR BLANCA
+   ========================================= */
+
+/* Ajuste del botón en móviles para que no choque con el fondo blanco */
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: 2px solid var(--flor-vibrante);
+}
+
+/* Enlaces de la barra de navegación */
+.custom-nav-link {
+    color: var(--texto-secundario) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Efecto Hover: Cambio de color y pequeña línea debajo */
+.custom-nav-link:hover, .custom-nav-link.active {
+    color: var(--flor-vibrante) !important;
+}
+
+.custom-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--flor-vibrante);
+    transition: width 0.3s ease;
+}
+
+.custom-nav-link:hover::after {
+    width: 100%;
 }
