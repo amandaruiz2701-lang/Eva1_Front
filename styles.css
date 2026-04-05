@@ -256,3 +256,24 @@ h1, h2, h3, h4, h5, h6 {
 #herramienta-registro .card-header {
     background-color: var(--color-fondo-app);
 }
+/* Fix para asegurar que los badges de sección siempre tengan texto blanco visible */
+.badge.bg-fusion, .badge[style*="var(--flor-oscura)"] {
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para los inputs del formulario pequeño */
+#herramienta-registro .form-control-sm {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+}
+
+/* Efecto en las filas de la tabla */
+#herramienta-registro tr {
+    border-bottom: 1px solid rgba(106, 27, 154, 0.03);
+}
+
+#herramienta-registro tr:last-child {
+    border-bottom: none;
+}
