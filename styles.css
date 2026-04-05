@@ -277,3 +277,73 @@ h1, h2, h3, h4, h5, h6 {
 #herramienta-registro tr:last-child {
     border-bottom: none;
 }
+
+/* =========================================
+   8. FOOTER Y ACCESIBILIDAD OSCURA (CORREGIDO)
+   ========================================= */
+
+/* Resplandor de la marca y títulos */
+.text-primary-fusion {
+    color: var(--flor-vibrante) !important;
+}
+
+/* Borde superior del footer */
+.border-fusion {
+    border-color: var(--flor-vibrante) !important;
+}
+
+/* Enlaces de Navegación */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--flor-vibrante);
+    padding-left: 5px; 
+}
+
+/* --- Iconos de Redes Sociales --- */
+.footer-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff !important; 
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.footer-social-icon:hover {
+    background-color: var(--flor-vibrante);
+    color: #ffffff !important;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 15px rgba(216, 27, 96, 0.3);
+}
+
+/* Inputs del Newsletter en modo oscuro */
+footer .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+footer .form-control:focus {
+    border-color: var(--flor-vibrante);
+    box-shadow: 0 0 0 0.25rem rgba(216, 27, 96, 0.2);
+    color: white;
+}
+
+footer .btn-fusion {
+    background-color: var(--flor-vibrante) !important;
+    border-color: var(--flor-vibrante) !important;
+}
+
+footer .btn-fusion:hover {
+    background-color: var(--flor-pastel) !important;
+    border-color: var(--flor-pastel) !important;
+    color: var(--flor-oscura) !important;
+}
