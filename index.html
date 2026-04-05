@@ -18,9 +18,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="#herramienta-kcal">Calculadora</a>
+                    <li class="nav-item"><a class="nav-link" href="#herramienta-kcal">Calculadora</a>
                     <li class="nav-item"><a class="nav-link" href="#herramienta-hipopresivos">Hipopresivos</a>
-                    <li class="nav-item"><a class="nav-link" href="#registro">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#herramienta-registro">Registro</a>
                 </ul>
             </div>
         </div>
@@ -69,11 +69,11 @@
 
                 <div class="col-lg-6 d-none d-lg-block position-relative hero-visual-col" aria-hidden="true">
                     
-    <img src="C:\Users\amand\Desktop\proyecto_front_2\Eva1_Front\img\flor1.png" class="floating-item item-1" alt="">
+    <img src="img\flor1.png" class="floating-item item-1" alt="">
     
-    <img src="C:\Users\amand\Desktop\proyecto_front_2\Eva1_Front\img\flor2.png" class="floating-item item-2" alt="">
+    <img src="img\flor2.png" class="floating-item item-2" alt="">
     
-    <img src="C:\Users\amand\Desktop\proyecto_front_2\Eva1_Front\img\pesa1.png" class="floating-item item-3" alt="">
+    <img src="img\pesa1.png" class="floating-item item-3" alt="">
 
 </div>
 
@@ -256,65 +256,96 @@
     </section>
 <hr class="my-5 text-muted">
 
-        <section id="registro" class="row justify-content-center mb-5">
-            <div class="col-12 col-lg-10">
-                <header class="text-center mb-4">
-                    <h2 class="display-6 fw-bold">Registro de Actividad</h2>
-                    <p class="text-muted">Monitorea tu consistencia y progreso semanal.</p>
-                </header>
+       <section id="herramienta-registro" class="py-5 bg-light border-top border-bottom">
+        <div class="container py-4">
+            <div class="row g-5">
 
-                <div class="card shadow-sm border-0 bg-white">
-                    <div class="card-body p-0">
-                        <div class="table-responsive">
-                            <table class="table table-hover table-borderless align-middle mb-0">
-                                <caption class="visually-hidden">Historial de entrenamientos de la semana actual</caption>
-                                <thead class="table-light border-bottom">
-                                    <tr>
-                                        <th scope="col" class="py-3 ps-4">Fecha</th>
-                                        <th scope="col" class="py-3">Actividad</th>
-                                        <th scope="col" class="py-3">Duración</th>
-                                        <th scope="col" class="py-3">Kcal Est.</th>
-                                        <th scope="col" class="py-3 pe-4 text-center">Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" class="ps-4 fw-normal text-muted">Lun, 29 Mar</th>
-                                        <td class="fw-bold">Fuerza (Tren Inferior)</td>
-                                        <td>45 min</td>
-                                        <td>320</td>
-                                        <td class="pe-4 text-center">
-                                            <span class="badge bg-success rounded-pill px-3 py-2">Completado</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="ps-4 fw-normal text-muted">Mar, 30 Mar</th>
-                                        <td class="fw-bold">Hipopresivos (Ciclo Básico)</td>
-                                        <td>15 min</td>
-                                        <td>50</td>
-                                        <td class="pe-4 text-center">
-                                            <span class="badge bg-success rounded-pill px-3 py-2">Completado</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="ps-4 fw-normal text-muted">Mié, 31 Mar</th>
-                                        <td class="fw-bold text-muted">Cardio LISS (Caminata)</td>
-                                        <td class="text-muted">30 min</td>
-                                        <td class="text-muted">150</td>
-                                        <td class="pe-4 text-center">
-                                            <span class="badge bg-warning text-dark rounded-pill px-3 py-2">Pendiente</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="card-footer bg-light border-0 text-center py-3">
-                        <button class="btn btn-outline-primary btn-sm px-4 fw-bold">Ver Historial Completo</button>
+                <div class="col-lg-4">
+                    <span class="badge rounded-pill px-3 py-2 mb-3 shadow-sm fw-bold" 
+                          style="background-color: var(--flor-oscura); color: #ffffff !important; display: inline-block;">
+                        Herramienta 03
+                    </span>
+                    <h2 class="display-6 fw-bold text-dark-fusion mb-4">Registro de Actividad</h2>
+                    <p class="text-muted mb-4">
+                        La disciplina se construye con datos. Registra tus sesiones para visualizar tu progreso y mantener la motivación a través de la constancia.
+                    </p>
+                    <div class="p-3 bg-white rounded-4 shadow-sm border-start border-4 border-fusion">
+                        <p class="small text-muted mb-0 italic">
+                            "Lo que no se define no se puede medir. Lo que no se mide, no se puede mejorar."
+                        </p>
                     </div>
                 </div>
+
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-4 bg-white overflow-hidden">
+                        
+                        <div class="card-body p-4 border-bottom bg-white">
+                            <h3 class="h6 mb-4 fw-bold text-uppercase tracking-wider text-muted">
+                                <i class="bi bi-plus-circle-fill text-primary-fusion me-2"></i>Nuevo Registro
+                            </h3>
+                            <form class="row g-3 align-items-end">
+                                <div class="col-md-4">
+                                    <label class="form-label small fw-bold text-dark">Actividad</label>
+                                    <input type="text" class="form-control form-control-sm bg-light border-0" placeholder="Ej: Yoga, Pesas...">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small fw-bold text-dark">Duración</label>
+                                    <input type="text" class="form-control form-control-sm bg-light border-0" placeholder="Ej: 30 min">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label small fw-bold text-dark">Fecha</label>
+                                    <input type="date" class="form-control form-control-sm bg-light border-0">
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-primary btn-sm w-100 fw-bold shadow-sm rounded-pill py-2">
+                                        Añadir
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-borderless align-middle mb-0">
+                                    <thead class="table-light border-bottom">
+                                        <tr>
+                                            <th scope="col" class="py-3 ps-4 small text-muted text-uppercase">Historial Reciente</th>
+                                            <th scope="col" class="py-3 small text-muted text-uppercase">Duración</th>
+                                            <th scope="col" class="py-3 pe-4 text-center small text-muted text-uppercase">Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ps-4">
+                                                <div class="fw-bold text-dark-fusion mb-0">Fuerza Tren Inferior</div>
+                                                <small class="text-muted">Lunes, 29 de Marzo</small>
+                                            </td>
+                                            <td class="text-muted small">45 min</td>
+                                            <td class="pe-4 text-center">
+                                                <span class="badge bg-success bg-opacity-10 text-success border border-success rounded-pill px-3 py-1">Completado</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ps-4">
+                                                <div class="fw-bold text-dark-fusion mb-0">Hipopresivos Nivel 1</div>
+                                                <small class="text-muted">Martes, 30 de Marzo</small>
+                                            </td>
+                                            <td class="text-muted small">15 min</td>
+                                            <td class="pe-4 text-center">
+                                                <span class="badge bg-success bg-opacity-10 text-success border border-success rounded-pill px-3 py-1">Completado</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-auto">

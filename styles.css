@@ -244,3 +244,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
     vertical-align: middle;
 }
+/* 7.4 Tabla de Registro Interactiva */
+#herramienta-registro .table-hover tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+#herramienta-registro .table-hover tbody tr:hover {
+    background-color: var(--color-flor-pastel) !important;
+}
+
+#herramienta-registro .card-header {
+    background-color: var(--color-fondo-app);
+}
