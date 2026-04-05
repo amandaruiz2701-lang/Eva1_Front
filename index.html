@@ -221,36 +221,32 @@
                 </div>
 
                 <div class="col-lg-7 order-2 order-lg-1">
-                    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-light text-center position-relative overflow-hidden">
+                    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5 bg-white text-center position-relative overflow-hidden">
                         
-                        <i class="bi bi-stopwatch position-absolute top-50 start-50 translate-middle text-white opacity-50" style="font-size: 15rem; z-index: 0;"></i>
+                        <div class="mb-4" aria-live="assertive">
+                            <span class="badge rounded-pill fs-6 px-4 py-2 text-uppercase tracking-wide shadow-sm" style="background-color: var(--flor-pastel); color: var(--flor-oscura); border: 1px solid var(--flor-vibrante);" id="fase-actual">
+                                Fase: Preparación
+                            </span>
+                        </div>
 
-                        <div class="position-relative z-1">
-                            <div class="mb-4" aria-live="assertive">
-                                <span class="badge bg-white text-dark-fusion border border-fusion fs-6 px-4 py-2 text-uppercase tracking-wide shadow-sm" id="fase-actual">
-                                    Fase: Preparación
-                                </span>
-                            </div>
+                        <div class="display-1 fw-bolder mb-4 timer-display" role="timer" aria-label="Tiempo restante" id="tiempo-display" style="font-variant-numeric: tabular-nums;">
+                            00:00
+                        </div>
 
-                            <div class="display-1 fw-bolder text-dark mb-4 timer-display" role="timer" aria-label="Tiempo restante" id="tiempo-display" style="font-variant-numeric: tabular-nums;">
-                                00:00
-                            </div>
+                        <div class="progress mb-5 shadow-sm" style="height: 12px; border-radius: 10px; background-color: var(--fondo-app);" role="progressbar" aria-label="Progreso del ciclo" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%; background-color: var(--flor-vibrante);"></div>
+                        </div>
 
-                            <div class="progress mb-5 bg-white shadow-sm" style="height: 12px; border-radius: 10px;" role="progressbar" aria-label="Progreso del ciclo" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-fusion" style="width: 0%"></div>
-                            </div>
-
-                            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                <button class="btn btn-success btn-lg px-4 fw-bold shadow-sm rounded-pill" aria-label="Iniciar rutina">
-                                    <i class="bi bi-play-fill"></i> Iniciar
-                                </button>
-                                <button class="btn btn-warning btn-lg px-4 fw-bold shadow-sm rounded-pill text-dark" aria-label="Pausar rutina" disabled>
-                                    <i class="bi bi-pause-fill"></i> Pausa
-                                </button>
-                                <button class="btn btn-outline-danger btn-lg px-4 fw-bold shadow-sm rounded-pill bg-white" aria-label="Reiniciar rutina">
-                                    <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
-                                </button>
-                            </div>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <button class="btn btn-primary btn-lg px-4 fw-bold shadow-sm rounded-pill" aria-label="Iniciar rutina">
+                                <i class="bi bi-play-fill"></i> Iniciar
+                            </button>
+                            <button class="btn btn-outline-primary btn-lg px-4 fw-bold shadow-sm rounded-pill" aria-label="Pausar rutina" disabled>
+                                <i class="bi bi-pause-fill"></i> Pausa
+                            </button>
+                            <button class="btn text-muted btn-lg px-4 fw-bold text-decoration-none" aria-label="Reiniciar rutina">
+                                <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
+                            </button>
                         </div>
                     </div>
                 </div>
